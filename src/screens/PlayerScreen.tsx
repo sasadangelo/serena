@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { BreathingOrb } from "../components/BreathingOrb";
+import { VolumeSlider } from "../components/VolumeSlider";
 import { ambientSources } from "../audio/ambientSources";
 import { useMeditationSession } from "../audio/useMeditationSession";
 import { estimateDurationSec, meditationScripts } from "../content/scripts";
@@ -25,7 +26,7 @@ export function PlayerScreen({ route, navigation }: Props) {
   const script = meditationScripts[categoryId];
   const theme = categoryThemes[categoryId];
   const estimatedSec = useMemo(() => Math.min(estimateDurationSec(script), 300), [script]);
-  const { voiceVolume, musicVolumes } = useSettings();
+  const { voiceVolume, musicVolumes, setVoiceVolume, setMusicVolume } = useSettings();
 
   const { status, elapsedSec, currentLineText, start, stop } = useMeditationSession(
     script,
@@ -95,6 +96,29 @@ export function PlayerScreen({ route, navigation }: Props) {
               <Text style={styles.primaryButtonText}>{isPlaying ? "Interrompi" : "Inizia"}</Text>
             </Pressable>
           )}
+
+          <View style={styles.sliders}>
+            <VolumeSlider
+              label="Voce guida"
+              icon="mic-outline"
+              accent={theme.accent}
+              value={voiceVolume}
+              onValueChange={setVoiceVolume}
+              labelColor={theme.textOnGradient}
+              valueColor={theme.textOnGradient}
+              trackColor="rgba(255,255,255,0.15)"
+            />
+            <VolumeSlider
+              label="Musica"
+              icon="musical-notes-outline"
+              accent={theme.accent}
+              value={musicVolumes[categoryId]}
+              onValueChange={(v) => setMusicVolume(categoryId, v)}
+              labelColor={theme.textOnGradient}
+              valueColor={theme.textOnGradient}
+              trackColor="rgba(255,255,255,0.15)"
+            />
+          </View>
         </View>
       </SafeAreaView>
     </LinearGradient>
@@ -170,5 +194,8 @@ const styles = StyleSheet.create({
     color: "#111116",
     fontSize: 16,
     fontWeight: "700",
+  },
+  sliders: {
+    marginTop: spacing.lg,
   },
 });

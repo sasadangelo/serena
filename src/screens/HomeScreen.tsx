@@ -1,7 +1,6 @@
 import React from "react";
-import { Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { CategoryCard } from "../components/CategoryCard";
 import { meditationScripts } from "../content/scripts";
@@ -17,19 +16,8 @@ export function HomeScreen({ navigation }: Props) {
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="light-content" backgroundColor={palette.background} />
       <ScrollView contentContainerStyle={styles.content}>
-        <View style={styles.headerRow}>
-          <View style={styles.headerTextBlock}>
-            <Text style={styles.eyebrow}>Un momento per te</Text>
-            <Text style={styles.title}>Serena</Text>
-          </View>
-          <Pressable
-            onPress={() => navigation.navigate("Settings")}
-            hitSlop={12}
-            style={styles.settingsButton}
-          >
-            <Ionicons name="settings-outline" size={22} color={palette.textSecondary} />
-          </Pressable>
-        </View>
+        <Text style={styles.eyebrow}>Un momento per te</Text>
+        <Text style={styles.title}>Serena</Text>
         <Text style={styles.subtitle}>
           Scegli il tuo obiettivo. Ogni sessione dura fino a 5 minuti, con voce guida e sottofondo
           rilassante.
@@ -64,21 +52,6 @@ const styles = StyleSheet.create({
   content: {
     padding: spacing.lg,
     paddingTop: spacing.xl,
-  },
-  headerRow: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-  },
-  headerTextBlock: {
-    flex: 1,
-  },
-  settingsButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: spacing.xs,
   },
   eyebrow: {
     color: palette.textSecondary,

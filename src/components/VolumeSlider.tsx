@@ -10,17 +10,29 @@ interface VolumeSliderProps {
   accent: string;
   value: number;
   onValueChange: (value: number) => void;
+  labelColor?: string;
+  valueColor?: string;
+  trackColor?: string;
 }
 
-export function VolumeSlider({ label, icon, accent, value, onValueChange }: VolumeSliderProps) {
+export function VolumeSlider({
+  label,
+  icon,
+  accent,
+  value,
+  onValueChange,
+  labelColor = palette.textPrimary,
+  valueColor = palette.textSecondary,
+  trackColor = palette.border,
+}: VolumeSliderProps) {
   return (
     <View style={styles.container}>
       <View style={styles.labelRow}>
         <View style={[styles.iconBadge, { backgroundColor: `${accent}26` }]}>
           <Ionicons name={icon as any} size={18} color={accent} />
         </View>
-        <Text style={styles.label}>{label}</Text>
-        <Text style={styles.value}>{Math.round(value * 100)}%</Text>
+        <Text style={[styles.label, { color: labelColor }]}>{label}</Text>
+        <Text style={[styles.value, { color: valueColor }]}>{Math.round(value * 100)}%</Text>
       </View>
       <Slider
         style={styles.slider}
@@ -29,7 +41,7 @@ export function VolumeSlider({ label, icon, accent, value, onValueChange }: Volu
         value={value}
         onValueChange={onValueChange}
         minimumTrackTintColor={accent}
-        maximumTrackTintColor={palette.border}
+        maximumTrackTintColor={trackColor}
         thumbTintColor={accent}
       />
     </View>

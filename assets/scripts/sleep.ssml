@@ -1,0 +1,83 @@
+<speak>
+    <prosody rate="75%" volume="soft">
+        Mettiti comodamente disteso nel tuo letto.
+    </prosody>
+    <break time="2s"/>
+    <prosody rate="75%" volume="x-soft">
+        Lascia che il cuscino sostenga completamente il peso della tua testa, e che il materasso accolga tutto il tuo corpo.
+    </prosody>
+    <break time="5s"/>
+    <prosody rate="75%" volume="soft">
+        Fai un respiro profondo... riempi l'addome e il petto...
+    </prosody>
+    <break time="1s"/>
+    <prosody rate="75%" volume="soft">
+        ed espirando lentamente, lascia andare ogni peso e ogni pensiero accumulato in questa giornata.
+    </prosody>
+    <break time="6s"/>
+
+    <prosody rate="75%" volume="soft">
+        Ora, immagina che a ogni espirazione il tuo corpo diventi un po' più pesante,  sprofondando dolcemente verso il basso.
+    </prosody>
+    <break time="5s"/>
+
+    <prosody rate="75%" volume="soft">
+        Porta l'attenzione alla fronte. Distendi i piccoli muscoli intorno agli occhi...
+        rilassa la mascella, lasciando che i denti siano leggermente dischiusi.
+    </prosody>
+    <break time="6s"/>
+
+    <prosody rate="75%" volume="soft">
+        Senti le spalle che si ammorbidiscono,
+        perdendo tutta la rigidità e cadendo pesantemente all'indietro.
+    </prosody>
+    <break time="6s"/>
+
+    <prosody rate="75%" volume="soft">
+        Lascia che questo flusso di profondo rilassamento scenda lungo le braccia...
+        attraverso i gomiti, i polsi, fino alle mani e alla punta delle dita.
+    </prosody>
+    <break time="6s"/>
+
+    <prosody rate="75%" volume="soft">
+        Senti il torace che si muove in modo naturale.
+        Non devi controllare nulla. L'aria entra ed esce da sola, senza alcuno sforzo.
+    </prosody>
+    <break time="7s"/>
+
+    <prosody rate="75%" volume="soft">
+        Se la mente si accende e qualche pensiero del giorno fa capolino, va benissimo così.
+        Osservalo semplicemente, come se guardassi una nuvola lontana nel cielo della sera...
+        e lascialo andare via.
+    </prosody>
+    <break time="8s"/>
+
+    <prosody rate="75%" volume="soft">
+        Riporta l'attenzione al contatto con le coperte,
+        al tepore del tuo letto, alla sicurezza di questo momento.
+    </prosody>
+    <break time="7s"/>
+
+    <prosody rate="75%" volume="soft">
+        La giornata è ormai alle spalle. Quello che è stato fatto è fatto,
+        quello che resta da fare può aspettare domani.
+    </prosody>
+    <break time="6s"/>
+
+    <prosody rate="75%" volume="soft">
+        Adesso esiste solo questo respiro... tranquillo, lento e profondo.
+    </prosody>
+    <break time="8s"/>
+
+    <prosody rate="75%" volume="soft">
+        Lasciati cullare da ogni inspirazione...
+        e abbandonati completamente a ogni espirazione.
+    </prosody>
+    <break time="10s"/>
+
+    <prosody rate="75%" volume="soft">
+        Il corpo è pesante, la mente è calma.
+        Riposa in pace.
+    </prosody>
+    <break time="12s"/>
+</speak>

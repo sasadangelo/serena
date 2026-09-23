@@ -1,4 +1,7 @@
 {
+  "files.associations": {
+    "*.ssml": "xml"
+  },
   "files.exclude": {
     "**/node_modules": true,
     "**/.expo": true,
